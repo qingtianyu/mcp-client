@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "api-server": {
+      "command": "node",
+      "args": [
+        "D:/mcp/mcp-api-server/build/index.js"
+      ],
+      "env": {
+        "BASE_URL": "https://127.0.0.0:8080",
+        "CLIENT_ID": "xxx",
+        "CLIENT_SECRET": "xxx",
+        "USERNAME": "xxx",
+        "PASSWORD": "xxx",
+        "TENANT_ID": "1",
+        "REJECT_UNAUTHORIZED": "false"
+      },
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}
