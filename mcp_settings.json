@@ -1,20 +1,36 @@
 {
   "mcpServers": {
-    "api-server": {
+    "system-api-server": {
       "command": "node",
       "args": [
-        "D:/mcp/mcp-api-server/build/index.js"
+        "D:/web/mcp/mcp-server/build/index.js"
       ],
       "env": {
-        "BASE_URL": "https://127.0.0.0:8080",
+        "BASE_URL": "http://localhost:8080",
         "CLIENT_ID": "xxx",
-        "CLIENT_SECRET": "xxx",
+        "CLIENT_SECRET": "xx",
         "USERNAME": "xxx",
         "PASSWORD": "xxx",
-        "TENANT_ID": "1",
-        "REJECT_UNAUTHORIZED": "false"
+        "TENANT_ID": "xxx",
+        "REJECT_UNAUTHORIZED": "false",
+        "ALLOWED_APIS": "/admin-api/system/user/page,/admin-api/system/user/create,/admin-api/system/user/update,/admin-api/system/role/page,/admin-api/system/operate-log/page"
       },
       "disabled": false,
+      "autoApprove": []
+    },
+    "@f4ww4z-mcp-mysql-server": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@f4ww4z/mcp-mysql-server",
+        "--config",
+        "\"{\\\"mysqlHost\\\":\\\"121.199.228.78\\\",\\\"mysqlUser\\\":\\\"root\\\",\\\"mysqlDatabase\\\":\\\"village_online_v3\\\",\\\"mysqlPassword\\\":\\\"Huayuan#2024\\\"}\""
+      ],
+      "disabled": true,
       "autoApprove": []
     }
   }
